@@ -1,26 +1,42 @@
-# Smart Web Scraper
+## website Scraper & Flask Dashboard
 
-A Python-based web scraper that extracts product data (title, price, link, image) from websites and saves it to a MySQL database. Built with Selenium and Flask for dynamic scraping and web interface.
-
----
-
-## Features
-
-- Scrapes product data from websites with dynamic content.
-- Saves data to MySQL database.
-- Handles duplicate products with automatic updates.
-- Export scraped data to CSV (future enhancement).
-- Lightweight Flask web interface to enter URL and view scraped data.
+This project scrapes product data (title, price, image, link) from **zelburry** website and stores it in a MySQL database. It also provides a Flask web interface to view and export scraped data.
 
 ---
 
 ## Requirements
 
-- Python 3.10+  
-- MySQL server  
-- Chrome browser  
+- Python 3.13
+- MySQL Database
+- Virtual Environment (`env` recommended)
+- Google Chrome (for Selenium)
+- ChromeDriver (handled automatically via `webdriver-manager`)
 
-Python packages (can be installed using `requirements.txt`):
+---
 
-```bash
+Create & activate virtual environment
+
+python -m venv env
+# Windows
+env\Scripts\activate
+# macOS / Linux
+source env/bin/activate
+
+Install dependencies
+
 pip install -r requirements.txt
+
+Configure database
+
+Edit config.py (or your own DB config) to match your MySQL credentials:
+
+
+Run Flask App
+
+python app.py
+
+Open in browser
+
+Go to: http://127.0.0.1:5000/
+in input paste this sample url:
+https://zellbury.com/collections/outerwear

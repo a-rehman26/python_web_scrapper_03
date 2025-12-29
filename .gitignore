@@ -1,4 +1,27 @@
-venv/
+# Python
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 *.pyc
+*.pkl
+
+# Virtual environment
+env/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Flask / Database / Files
+scraped_data.xlsx
+*.db
+
+# Logs
+*.log
