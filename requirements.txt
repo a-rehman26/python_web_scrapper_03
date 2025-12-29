@@ -1,0 +1,6 @@
+flask
+mysql-connector-python
+selenium
+webdriver-manager
+pandas
+openpyxl

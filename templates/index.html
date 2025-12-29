@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Smart Web Scraper</title>
+  </head>
+  <body>
+    <h1>Smart Web Scraper</h1>
+    <form method="POST">
+      <input
+        type="text"
+        name="url"
+        placeholder="Enter website URL"
+        required
+        style="width: 400px"
+      />
+      <button type="submit">Scrape</button>
+    </form>
+    <a href="/export">Export Data</a>
+    <h2>Scraped Data</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Link</th>
+        <th>Image</th>
+      </tr>
+      {% for product in products %}
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.title }}</td>
+        <td>{{ product.price }}</td>
+        <td><a href="{{ product.link }}" target="_blank">Link</a></td>
+        <td>
+          {% if product.image %}
+          <img src="{{ product.image }}" width="50" />
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
