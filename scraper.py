@@ -82,6 +82,5 @@ def scrape_website(url):
             "image": image.strip()
         })
 
-
     driver.quit()
     return products
