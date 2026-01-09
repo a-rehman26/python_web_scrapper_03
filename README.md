@@ -40,3 +40,5 @@ Open in browser
 Go to: http://127.0.0.1:5000/
 in input paste this sample url:
 https://zellbury.com/collections/outerwear
+
+#educational purpose only
